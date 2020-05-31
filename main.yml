@@ -17,6 +17,14 @@
        name: nginx
        state: latest
 
+    - name: copy html doc into nginx default directory
+      copy:
+       src: files/index.html
+       dest: /usr/share/nginx/index.html
+       owner: nginx
+       group: nginx
+       mode: 0644
+
     - name: start nginx
       systemd:
        name: nginx

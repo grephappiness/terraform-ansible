@@ -1,2 +1,4 @@
 .terraform/
 main.retry
+terraform.tfstate.backup
+terraform.tfstate
