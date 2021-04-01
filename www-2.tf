@@ -5,7 +5,7 @@ resource "digitalocean_droplet" "www-2" {
     size = "s-1vcpu-1gb"
     private_networking = true
     ssh_keys = [
-      var.ssh_fingerprint
+      data.digitalocean_ssh_key.terraform.id
     ]
   connection {
 
